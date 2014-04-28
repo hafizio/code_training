@@ -29,3 +29,9 @@ def sort_sentence(str)
   else a + ' ' + b
   end
 end
+
+# Sensei CrowdHailer (Passed)
+def sort_sentence str
+  lower, upper = str.scan(/\w+/).partition{|w| w.downcase == w}
+  (lower.sort + upper.sort.reverse).join(" ")
+end
