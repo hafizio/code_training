@@ -8,4 +8,4 @@ Few rules:
 
 2. Short codes
 
-3. Refactor
+3. Refactoring codes

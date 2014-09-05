@@ -1,6 +1,6 @@
 require 'date'
 
-def find_out_christmas_weekday date
+def find_out_christmas_weekday(date)
   if date.class == String
     x = ' '
     date.scan(/\d{4}/) { |y| x << y }
@@ -12,4 +12,3 @@ def find_out_christmas_weekday date
     d.strftime("%A")
   end
 end
-

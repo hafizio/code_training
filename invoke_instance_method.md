@@ -4,7 +4,9 @@ Extend the Array class so that it supports an "invoke" instance method. The meth
 
 This method will be a more advanced alternative to using the each/to_proc shorthand:
 
+```ruby
 array_items.each(&:method_to_call)
+```
 
 The invoke method signature will take a method name, any number of arguments to be passed to the invoked method and optionally a block that will be used to determine if the method should be called for a particular item or not.
 
@@ -14,7 +16,7 @@ Items that do not have their method invoked will not be included in the array.
 
 For example, if you wanted to call the "update" method with two arguments on all non-nil objects within an array called "items":
 
-# contrived class example used to provide a method that we could call
+contrived class example used to provide a method that we could call
 
 ```ruby
 class ExampleItem
@@ -25,9 +27,9 @@ class ExampleItem
     "updated"
   end
 end
-```
 
 items = [ExampleItem.new, nil, ExampleItem.new]
 
 update_results = items.invoke(:update, "argument 1", "argument 2") {|item| item != nil}
 # update_result would == ['updated', 'updated']
+```
